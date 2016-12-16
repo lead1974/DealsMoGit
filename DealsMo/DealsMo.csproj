@@ -181,6 +181,8 @@
     <Compile Include="DataAccess\Database.cs" />
     <Compile Include="DataAccess\Filters\TransactionFilter.cs" />
     <Compile Include="DataAccess\Models\User.cs" />
+    <Compile Include="DataAccess\Repos\IEntityRepository.cs" />
+    <Compile Include="DataAccess\Repos\UserRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

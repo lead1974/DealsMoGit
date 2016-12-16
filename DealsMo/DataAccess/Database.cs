@@ -12,7 +12,7 @@ using DealsMo.DataAccess.Models;
 
 namespace DealsMo.DataAccess
 {
-    public static class DatabaseS
+    public static class Database
     {
         private const string SessionKey = "ssoconcur.DataBase.SessionKey";
         private static ISessionFactory _sessionFactory;

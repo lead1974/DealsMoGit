@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
+using DealsMo.DataAccess;
+
 namespace DealsMo.DataAccess.Filters
 {
     public class TransactionFilter : IActionFilter
