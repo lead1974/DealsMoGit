@@ -10,6 +10,7 @@ namespace DealsMo.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Services;
 
     public static class NinjectWebCommon 
     {
@@ -61,6 +62,14 @@ namespace DealsMo.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-        }        
+            kernel.Bind<IGlobalService>().To<GlobalService>().InRequestScope();
+
+#if DEBUG
+            kernel.Bind<IMailService>().To<MockMailService>().InRequestScope();
+#else
+            kernel.Bind<IMailService>().To<MailService>().InRequestScope();
+#endif
+
+        }
     }
 }
