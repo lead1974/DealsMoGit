@@ -1,11 +1,13 @@
-﻿using DealsMo.DataAccess.Models;
-using DealsMo.DataAccess.Repos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq.Expressions;
+
+using DealsMo.DataAccess.Models;
+using DealsMo.DataAccess.Repos;
+using NHibernate.Linq;
 
 namespace DealsMo.DataAccess.Repos
 {
@@ -15,7 +17,7 @@ namespace DealsMo.DataAccess.Repos
         {
             get
             {
-                throw new NotImplementedException();
+            return Database.Session.Query<User>().AsQueryable();
             }
         }
 
