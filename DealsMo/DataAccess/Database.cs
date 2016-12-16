@@ -12,7 +12,7 @@ using DealsMo.DataAccess.Models;
 
 namespace DealsMo.DataAccess
 {
-    public static class Database
+    public static class DatabaseS
     {
         private const string SessionKey = "ssoconcur.DataBase.SessionKey";
         private static ISessionFactory _sessionFactory;
@@ -28,7 +28,7 @@ namespace DealsMo.DataAccess
 
             config.DataBaseIntegration(x =>
             {
-                x.ConnectionString = "DataSource = DEVASP; userID = JAVAUSER; Password = NOMAX12345;";
+                x.ConnectionString = "DataSource = DBNAME; userID = USERNAME; Password = PASSWORD;";
                 x.Driver<NHibernate.Driver.DB2400Driver>();
                 x.Dialect<NHibernate.Dialect.DB2400Dialect>();
                 x.LogFormattedSql = true;
