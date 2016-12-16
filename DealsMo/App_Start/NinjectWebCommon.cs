@@ -11,6 +11,8 @@ namespace DealsMo.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using Services;
+    using DataAccess.Repos;
+    using DataAccess.Models;
 
     public static class NinjectWebCommon 
     {
@@ -62,6 +64,7 @@ namespace DealsMo.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IUserRepository<User>>().To<UserRepository>().InRequestScope();
             kernel.Bind<IGlobalService>().To<GlobalService>().InRequestScope();
 
 #if DEBUG

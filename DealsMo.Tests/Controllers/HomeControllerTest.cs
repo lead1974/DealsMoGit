@@ -7,6 +7,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DealsMo;
 using DealsMo.Controllers;
 
+using DealsMo.DataAccess.Repos;
+using DealsMo.Services;
+using DealsMo.DataAccess.Models;
+
 namespace DealsMo.Tests.Controllers
 {
     [TestClass]
